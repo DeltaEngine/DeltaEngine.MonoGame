@@ -17,7 +17,7 @@ namespace DeltaEngine.Input.MonoGame.Tests
 
 		private readonly TouchCollectionUpdater touches;
 
-		public override Point GetPosition(int touchIndex)
+		public override Vector2D GetPosition(int touchIndex)
 		{
 			return touches.locations[touchIndex];
 		}

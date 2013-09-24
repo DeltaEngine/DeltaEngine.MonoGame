@@ -35,25 +35,25 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="DeltaEngine">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.dll</HintPath>
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.dll</HintPath>
     </Reference>
     <Reference Include="DeltaEngine.Graphics">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.Graphics.dll</HintPath>
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="DeltaEngine.Input">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.Input.dll</HintPath>
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Input.dll</HintPath>
     </Reference>
-    <Reference Include="DeltaEngine.Rendering">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.Rendering.dll</HintPath>
+    <Reference Include="DeltaEngine.Rendering2D">
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Rendering2D.dll</HintPath>
     </Reference>
-    <Reference Include="DeltaEngine.Rendering.Particles">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.Rendering.Particles.dll</HintPath>
+    <Reference Include="DeltaEngine.Rendering3D.Particles">
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Rendering3D.Particles.dll</HintPath>
     </Reference>
-    <Reference Include="DeltaEngine.Rendering.Sprites">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.Rendering.Sprites.dll</HintPath>
+    <Reference Include="DeltaEngine.Rendering2D.Sprites">
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Rendering2D.Sprites.dll</HintPath>
     </Reference>
     <Reference Include="DeltaEngine.WindowsMonoGame">
-	  <HintPath>$(DeltaEnginePath)\DeltaEngine.WindowsMonoGame.dll</HintPath>
+	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.WindowsMonoGame.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -10,10 +10,10 @@ namespace DeltaEngine.Graphics.MonoGame
 	/// </summary>
 	public class XnaScreenshotCapturer : ScreenshotCapturer
 	{
-		public XnaScreenshotCapturer(XnaDevice device, Window window)
+		public XnaScreenshotCapturer(Device device, Window window)
 		{
 			this.window = window;
-			this.device = device;
+			this.device = (XnaDevice)device;
 		}
 
 		private readonly XnaDevice device;
