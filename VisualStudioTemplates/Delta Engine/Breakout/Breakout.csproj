@@ -61,9 +61,6 @@
     <Reference Include="DeltaEngine.Rendering3D.Particles">
 	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Rendering3D.Particles.dll</HintPath>
     </Reference>
-    <Reference Include="DeltaEngine.Rendering2D.Sprites">
-	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Rendering2D.Sprites.dll</HintPath>
-    </Reference>
     <Reference Include="DeltaEngine.Scenes">
 	  <HintPath>$(DeltaEnginePath)\MonoGame\DeltaEngine.Scenes.dll</HintPath>
     </Reference>
