@@ -171,10 +171,7 @@ namespace DeltaEngine.Graphics.MonoGame
 			CheckIfTheInitializationOrderInResolverWasCorrect(nativeTexture);
 #endif
 			NativeDevice.Textures[0] = nativeTexture;
-			NativeDevice.SamplerStates[0] = image.DisableLinearFiltering
-				? SamplerState.PointClamp : SamplerState.LinearClamp;
-			ShaderEffect.TextureEnabled = true;
-			ShaderEffect.Texture = NativeDevice.Textures[0] as Texture2D;
+			NativeDevice.SamplerStates[0] = GetXnaSamplerState(image);
 			currentTexture = image;
 		}
 
@@ -191,8 +188,8 @@ namespace DeltaEngine.Graphics.MonoGame
 			}
 		}
 
-		public class InitializationOrderIsWrongCheckIfInitializationHappensInResolverEvent :
-			Exception {}
+		public class InitializationOrderIsWrongCheckIfInitializationHappensInResolverEvent
+			: Exception {}
 
 		private bool initializationOrderAlreadyChecked;
 
@@ -202,6 +199,13 @@ namespace DeltaEngine.Graphics.MonoGame
 
 		}
 #endif
+		
+		private static SamplerState GetXnaSamplerState(Image texture)
+		{
+			return texture.DisableLinearFiltering
+				? (texture.AllowTiling ? SamplerState.PointWrap : SamplerState.PointClamp)
+				: (texture.AllowTiling ? SamplerState.LinearWrap : SamplerState.LinearClamp);
+		}
 
 		public void DisableTexturing()
 		{
