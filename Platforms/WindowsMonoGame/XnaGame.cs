@@ -44,11 +44,5 @@ namespace DeltaEngine.Platforms
 		{
 			resolver.RunTick();
 		}
-
-		public new void Dispose()
-		{
-			base.Dispose();
-			resolver.Dispose();
-		}
 	}
 }

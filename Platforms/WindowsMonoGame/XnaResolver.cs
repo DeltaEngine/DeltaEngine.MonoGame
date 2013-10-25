@@ -1,4 +1,6 @@
-﻿using DeltaEngine.Graphics.MonoGame;
+﻿using DeltaEngine.Content.Xml;
+using DeltaEngine.Graphics;
+using DeltaEngine.Graphics.MonoGame;
 using DeltaEngine.Input.MonoGame;
 using DeltaEngine.Multimedia.MonoGame;
 using DeltaEngine.Platforms.Windows;
@@ -18,6 +20,7 @@ namespace DeltaEngine.Platforms
 			RegisterSingleton<WindowsSystemInformation>();
 			var device = new XnaDevice(game, window, settings);
 			RegisterInstance(device);
+			RegisterSingleton<Drawing>();
 			game.StartXnaGameToInitializeGraphics();
 			RegisterInstance(game);
 			RegisterInstance(game.Content);
@@ -27,6 +30,7 @@ namespace DeltaEngine.Platforms
 			RegisterSingleton<XnaKeyboard>();
 			RegisterSingleton<XnaTouch>();
 			RegisterSingleton<XnaGamePad>();
+			Register<InputCommands>();
 			if (IsAlreadyInitialized)
 				throw new UnableToRegisterMoreTypesAppAlreadyStarted();
 		}
@@ -42,6 +46,7 @@ namespace DeltaEngine.Platforms
 			Register<XnaGeometry>();
 			Register<XnaSound>();
 			Register<XnaMusic>();
+			Register<XmlContent>();
 		}
 
 		/// <summary>
