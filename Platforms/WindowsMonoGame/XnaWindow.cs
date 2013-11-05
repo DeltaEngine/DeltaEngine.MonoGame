@@ -185,12 +185,13 @@ namespace DeltaEngine.Platforms
 		public void CloseAfterFrame()
 		{
 			IsClosing = true;
+			game.Exit();
 		}
 
 		public void Dispose()
 		{
 			CloseAfterFrame();
-			game.Dispose();
+			game.Exit();
 		}
 	}
 }
